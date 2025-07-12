@@ -47,14 +47,14 @@ tar xvzf trim_galore.tar.gz
 ~/TrimGalore-0.6.10/trim_galore
 Command: ./trim_galore --paired /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_1.fastq /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_2.fastq -o /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed
 
-## Alignment
+# Alignment
 Bismark needs the following tools to be installed and ideally available in the PATH environment:
 Bowtie2: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 HISAT2: https://daehwankimlab.github.io/hisat2/
 Minimap2: https://lh3.github.io/minimap2/minimap2.html
 Samtools: https://www.htslib.org/download/
 
-# Download Bowtie2 
+### Download Bowtie2 
 Link: https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.4/bowtie2-2.5.4-source.zip/download
 command: wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.4/bowtie2-2.5.4-source.zip/download
 unzip bowtie2-2.5.4-source.zip
@@ -79,8 +79,27 @@ Download & install Bismark
 Link: https://felixkrueger.github.io/Bismark/installation/
 Documentation: https://felixkrueger.github.io/Bismark/quick_reference/
 Commands:
+cd ..
+wget https://github.com/FelixKrueger/Bismark/archive/master.zip
+unzip master.zip
 
+Download Human genome for alignment
+Link: https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/
+Human Genome: hg19.fa
+gunzip hg19.fa.gz
+cd Bismark-master
 
+move the hg19.fa file into a folder say 'genome'
 
+command: Build Bismark Index
+./bismark_genome_preparation --bowtie2 /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/genome/
+
+cd Bismark-master
+Alignment command: 
+bismark --genome /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/genome/ /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_1_val_1.fq /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_2_val_2.fq -o results/
+
+# Deduplication
+Command:
+deduplicate_bismark --bam results/*bismark_bt2_pe.bam
 
 
