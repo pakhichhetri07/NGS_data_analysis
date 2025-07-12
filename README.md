@@ -102,4 +102,20 @@ bismark --genome /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Project
 Command:
 deduplicate_bismark --bam results/*bismark_bt2_pe.bam
 
+# Methylation extraction
+Command:
+bismark_methylation_extractor
+
+
+# Sample report
+Command:
+bismark2report
+
+
+# Summary report
+Command:
+bismark2summary
+
+
+
 
