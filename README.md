@@ -47,6 +47,17 @@ tar xvzf trim_galore.tar.gz
 ~/TrimGalore-0.6.10/trim_galore
 Command: ./trim_galore --paired /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_1.fastq /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_2.fastq -o /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed
 
+=== Summary ===
+
+Total reads processed:                 458,003
+Reads with adapters:                   133,259 (29.1%)
+Reads written (passing filters):       458,003 (100.0%)
+
+Total basepairs processed:    61,641,554 bp
+Quality-trimmed:                  22,254 bp (0.0%)
+Total written (filtered):     61,414,492 bp (99.6%)
+
+
 # Alignment
 Bismark needs the following tools to be installed and ideally available in the PATH environment:
 Bowtie2: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
