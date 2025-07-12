@@ -46,7 +46,7 @@ tar xvzf trim_galore.tar.gz
 # Run Trim Galore
 cd TrimGalore-0.6.10
 Command:
-./trim_galore --paired /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_1.fastq /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_2.fastq -o /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed
+./trim_galore --paired /mnt/e/GitHub_Projects/subset_1.fastq /mnt/e/GitHub_Projects/subset_1.fastq -o /mnt/e/GitHub_Projects/data/trimmed
 
 === Summary ===
 ### subset_1.fastq
@@ -81,7 +81,7 @@ unzip bowtie2-2.5.4-source.zip
 cd bowtie2-2.5.4
 make
 ls -l bowtie2*
-export PATH=/mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/bowtie2-2.5.4:$PATH
+export PATH=/mnt/e/GitHub_Projects/bowtie2-2.5.4:$PATH
 ./bowtie2 --version
 
 Download & install samtools
@@ -112,11 +112,11 @@ cd Bismark-master
 move the hg19.fa file into a folder say 'genome'
 
 command: Build Bismark Index
-./bismark_genome_preparation --bowtie2 /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/genome/
+./bismark_genome_preparation --bowtie2 /mnt/e/GitHub_Projects/genome
 
 cd Bismark-master
 Alignment command: 
-bismark --genome /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/genome/ -1 /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_1_val_1.fq -2 /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_2_val_2.fq -o results/
+bismark --genome /mnt/e/GitHub_Projects/genome/ -1 /mnt/e/GitHub_Projects/data/trimmed/subset_1_val_1.fq -2 /mnt/e/GitHub_Projects/data/trimmed/subset_2_val_2.fq -o results/
 
 # Deduplication
 Command:
