@@ -6,9 +6,9 @@ Curated dataset contains two files labeled as “subset 1 (133.8 MB)” and “s
 Citation: Ryan, D., & Wolff, J. (2017). MethylSeq_2017 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.557099
 
 ## Download dataset instruction
-Visit SRA (Sequence Read Archive) database "https://www.ncbi.nlm.nih.gov/sra/"
+Visit SRA (Sequence Read Archive) database 
+Link: https://www.ncbi.nlm.nih.gov/sra/
 Select for the SRR ID "https://www.ncbi.nlm.nih.gov/sra/?term=ERR361748"
-
 Commands: 
 prefetch ERR361748
 Fasterq-dump ERR361748
@@ -25,9 +25,10 @@ fastqc subset2.fastq
 ## Trimming
 Install Cutadapt 
 Link: https://cutadapt.readthedocs.io/en/stable/installation.html
-Command: sudo apt install pipx python3-venv (Ubuntu Lts 22.02)
+Command: 
+sudo apt install pipx python3-venv (Ubuntu Lts 22.02)
 pipx install cutadapt
-
+cutadapt --version
 
 Tool used: TrimGalore 
 Link: https://github.com/FelixKrueger/TrimGalore/blob/master/README.md
@@ -36,3 +37,8 @@ curl -fsSL https://github.com/FelixKrueger/TrimGalore/archive/0.6.10.tar.gz -o t
 tar xvzf trim_galore.tar.gz
 # Run Trim Galore
 ~/TrimGalore-0.6.10/trim_galore
+Command: ./trim_galore --paired /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_1.fastq /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/subset_2.fastq -o /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed
+
+
+
+
