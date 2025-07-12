@@ -114,13 +114,27 @@ move the hg19.fa file into a folder say 'genome'
 command: Build Bismark Index
 ./bismark_genome_preparation --bowtie2 /mnt/e/GitHub_Projects/genome
 
+(OR)
+
+Directly Download indexed genome file 
+https://benlangmead.github.io/aws-indexes/bowtie
+
 cd Bismark-master
 Alignment command: 
 bismark --genome /mnt/e/GitHub_Projects/genome/ -1 /mnt/e/GitHub_Projects/data/trimmed/subset_1_val_1.fq -2 /mnt/e/GitHub_Projects/data/trimmed/subset_2_val_2.fq -o results/
 
+## Directly available bam file download
+Link: https://zenodo.org/records/557099/files/aligned_subset.bam?download=1
+
+# sorting by read_name
+samtools sort -n -o /mnt/e/GitHub_Projects/data/aligned_subset_name_sorted.bam /mnt/e/GitHub_Projects/data/aligned_subset.bam
+
+
+
 # Deduplication
 Command:
-deduplicate_bismark --bam results/*bismark_bt2_pe.bam
+cd Bismark-master
+./deduplicate_bismark -p --bam /mnt/e/GitHub_Projects/data/aligned_subset_name_sorted.bam
 
 # Methylation extraction
 Command:
