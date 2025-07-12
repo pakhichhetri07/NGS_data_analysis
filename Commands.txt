@@ -1,0 +1,3 @@
+wc -l 
+wc -c
+grep '@' subset_1.fastq | wc -l
