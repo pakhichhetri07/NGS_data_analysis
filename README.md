@@ -15,10 +15,24 @@ Fasterq-dump ERR361748
 fasterq-dump ERR361748 --maxsize 100000
 
 ## Quality Control
+Tool used: FastQC
 Download & Install FastQC tool 
 Link: https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc
 Locate the downloaded tool & run command 
 fastqc subset_1.fastq
 fastqc subset2.fastq
 
+## Trimming
+Install Cutadapt 
+Link: https://cutadapt.readthedocs.io/en/stable/installation.html
+Command: sudo apt install pipx python3-venv (Ubuntu Lts 22.02)
+pipx install cutadapt
 
+
+Tool used: TrimGalore 
+Link: https://github.com/FelixKrueger/TrimGalore/blob/master/README.md
+# Install TrimGalore: 
+curl -fsSL https://github.com/FelixKrueger/TrimGalore/archive/0.6.10.tar.gz -o trim_galore.tar.gz
+tar xvzf trim_galore.tar.gz
+# Run Trim Galore
+~/TrimGalore-0.6.10/trim_galore
