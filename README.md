@@ -96,7 +96,7 @@ command: Build Bismark Index
 
 cd Bismark-master
 Alignment command: 
-bismark --genome /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/genome/ /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_1_val_1.fq /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_2_val_2.fq -o results/
+bismark --genome /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/genome/ -1 /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_1_val_1.fq -2 /mnt/c/Users/Pakhi/OneDrive/Desktop/My_documents/GitHub_Projects/data/trimmed/subset_2_val_2.fq -o results/
 
 # Deduplication
 Command:
